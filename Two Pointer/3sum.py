@@ -4,7 +4,7 @@
 # Time Complexity: O(n^2)
 # Space Complexity: O(1) extra (excluding output)
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
         nums.sort()
         result= []
         n=len(nums)
