@@ -73,5 +73,3 @@ Instead of checking every element, repeatedly eliminate half of the search space
 ## Goal
 
 **100 Days → Consistent DSA Practice → Better Problem Solving**
-
-Focus is not just on solving problems, but on recognizing patterns and understanding **why** a particular approach works.
