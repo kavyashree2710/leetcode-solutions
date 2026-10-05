@@ -44,19 +44,6 @@ Use two indices and move them based on the condition instead of repeatedly scann
 
 ---
 
-### Binary Search
-
-**Trigger signs:**
-
-* Sorted array
-* Searching for a specific value
-* Finding a boundary or position
-* Rotated sorted array
-* Problems where the search space can be divided in half
-
-**Key idea:**
-
-Instead of checking every element, repeatedly eliminate half of the search space.
 
 **Things to remember:**
 
