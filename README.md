@@ -19,7 +19,7 @@ Tracking my progress learning data structures & algorithms, pattern by pattern.
 
 ### Day 4 - Binary Search
 - [x] Find First and Last Position of Element in Sorted Array
-- [ ] Koko Eating Bananas
+- [x] Koko Eating Bananas
 
 ## Notes
 
