@@ -77,3 +77,21 @@ Learning data structures and algorithms **pattern by pattern**: 5 days of study 
 - **Binary search on the answer (Koko):** search over a range of possible answers, using a helper that checks "is this guess good enough?". Use `<=`, not `==`, because the check value can skip numbers. Return `left` after the loop.
 
 ---
+
+## 🐞 Mistakes Log
+
+| Problem | Mistake | Lesson |
+|---|---|---|
+| Two Sum II | Missing `return` on a match, mixed `for` with `while`, forgot 1-indexing | Return immediately on a match, and re-read "indexed" wording |
+| Valid Palindrome | Used `if` where `while` was needed to skip characters | Skipping until a condition is met needs `while` |
+| 3Sum | Loop started at index 1, and duplicate skipping compared the wrong neighbor | Check `left-1` / `right+1`, and trace `[0,0,0,0]` |
+| Search in Rotated Array | `<` vs `<=` on the inclusive boundary | The inclusive side depends on which end of the sorted half `mid` sits at |
+| First/Last Position | Linear expand-outward (crash risk and O(n)) | Use two boundary binary searches |
+| Koko Eating Bananas | Searched for `== h`, returned hours instead of speed | Use `<= h` and return the speed |
+
+---
+
+## 🎯 Up Next
+- [ ] Finish Day 5 (Median of Two Sorted Arrays, Trapping Rain Water)
+- [ ] Revision days: redo the hardest problems from Week 1
+- [ ] Week 2: Sliding Window + Fast & Slow Pointers
