@@ -6,7 +6,7 @@
 
 ![Challenge](https://img.shields.io/badge/Challenge-100%20Days-2A6F77?style=for-the-badge)
 ![Day](https://img.shields.io/badge/Day-5%20%2F%20100-F2A900?style=for-the-badge)
-![Solved](https://img.shields.io/badge/Solved-9-3C6E47?style=for-the-badge)
+![Solved](https://img.shields.io/badge/Solved-10-3C6E47?style=for-the-badge)
 ![Language](https://img.shields.io/badge/Python-3-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 `█░░░░░░░░░░░░░░░░░░░` **5%**
@@ -67,7 +67,7 @@
 
 | Pattern | Status | Solved |
 |---|---|---|
-| Two Pointers | 🟡 In progress | 5 / 6 |
+| Two Pointers | 🟢 Complete | 6 / 6 |
 | Binary Search | 🟡 In progress | 4 / 5 |
 | Sliding Window | ⚪ Not started | 0 / 6 |
 | Fast & Slow Pointers | ⚪ Not started | 0 / 5 |
@@ -85,7 +85,7 @@
 | 11 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟠 Medium | O(n) | O(1) | [🔗](Two%20Pointer/container-with-most-water.py) |
 | 15 | [3Sum](https://leetcode.com/problems/3sum/) | 🟠 Medium | O(n²) | O(1) | [🔗](Two%20Pointer/3sum.py) |
 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 🟢 Easy | O(n) | O(1) | [🔗](Two%20Pointer/remove-duplicates-from-sorted-array.py) |
-| 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | - | - | ⏳ Pending |
+| 42 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | O(n) | O(1) | [🔗](Two%20Pointer/trapping-rain-water.py) |
 
 ### Binary Search
 
@@ -95,7 +95,7 @@
 | 33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 🟠 Medium | O(log n) | O(1) | [🔗](Binary%20Search/search-in-rotated-sorted-array.py) |
 | 34 | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 🟠 Medium | O(log n) | O(1) | [🔗](Binary%20Search/find-first-and-last-position.py) |
 | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | 🟠 Medium | O(n log m) | O(1) | [🔗](Binary%20Search/koko-eating-bananas.py) |
-| 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 🔴 Hard | - | - | ⏳ In progress |
+| 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 🔴 Hard | - | - | ⏳ Pending |
 
 ---
 
@@ -107,7 +107,9 @@
 | 2 | Two Pointers | 3Sum, Remove Duplicates from Sorted Array | ✅ |
 | 3 | Binary Search | Binary Search, Search in Rotated Sorted Array | ✅ |
 | 4 | Binary Search | First and Last Position, Koko Eating Bananas | ✅ |
-| 5 | Stretch (Hard) | Median of Two Sorted Arrays, Trapping Rain Water | 🟡 |
+| 5 | Stretch (Hard) | Trapping Rain Water ✅, Median of Two Sorted Arrays ⏳ | 🟡 |
+| 6 | Revision | Redo hardest problems, rewrite notes, attempt Median | ⚪ |
+| 7 | Revision | Timed practice: 2 new problems in 45 minutes | ⚪ |
 
 ---
 
@@ -117,10 +119,11 @@
 <summary><b>Two Pointers</b></summary>
 
 - **Trigger signs:** sorted array with a pair or target, palindrome checks, maximizing something between two endpoints, in-place duplicate removal.
-- **Converging pointers** (start at both ends, move inward): Two Sum II, Valid Palindrome, Container With Most Water, 3Sum.
+- **Converging pointers** (start at both ends, move inward): Two Sum II, Valid Palindrome, Container With Most Water, 3Sum, Trapping Rain Water.
 - **Read/write pointers** (both move left to right, one scans and one marks the write position): Remove Duplicates.
 - **Container insight:** always move the pointer on the limiting side, because moving the taller one can never improve the area.
 - **3Sum:** sort first, fix one number, run two pointers on the rest, and skip duplicates on all three positions.
+- **Trapping Rain Water:** track `max_left` and `max_right`, and always process the side with the shorter bar. Its water level depends only on its own side's max, because the other side is guaranteed to have a wall at least as tall.
 - **Template:** `left, right = 0, n - 1`, then `while left < right`, and move a pointer based on a condition.
 
 </details>
@@ -150,6 +153,7 @@
 | Search in Rotated Array | `<` vs `<=` on the inclusive boundary | The inclusive side depends on which end of the sorted half `mid` sits at |
 | First/Last Position | Linear expand-outward from one match (crash risk and O(n)) | Use two boundary binary searches |
 | Koko Eating Bananas | Searched for `== h`, returned hours instead of speed | Use `<= h` and return the speed |
+| Trapping Rain Water | First tried per-bar rescans (O(n²)) and compared indices instead of heights | Compute each max once and reuse it, and always compare `height[...]` values |
 
 **Recurring theme:** boundary conditions (`<` vs `<=`, `==` vs `<=`, off-by-one). Fix: trace an example by hand before submitting.
 
@@ -166,7 +170,8 @@ leetcode-solutions/
 │   ├── valid-palindrome.py
 │   ├── container-with-most-water.py
 │   ├── 3sum.py
-│   └── remove-duplicates-from-sorted-array.py
+│   ├── remove-duplicates-from-sorted-array.py
+│   └── trapping-rain-water.py
 ├── Binary Search/
 │   ├── binary-search.py
 │   ├── search-in-rotated-sorted-array.py
@@ -178,6 +183,8 @@ leetcode-solutions/
 ---
 
 ## 🎯 Up Next
-- [ ] Finish Day 5: Median of Two Sorted Arrays, Trapping Rain Water
-- [ ] Week 1 revision days: redo the hardest problems without hints
+- [ ] Day 6 (revision): redo 3Sum, Search in Rotated Sorted Array, and Koko Eating Bananas without hints
+- [ ] Day 6: rewrite Two Pointers and Binary Search notes from memory
+- [ ] Attempt Median of Two Sorted Arrays (merge version first, then partition)
+- [ ] Day 7: timed practice, 2 new problems in 45 minutes
 - [ ] Week 2: Sliding Window + Fast & Slow Pointers
