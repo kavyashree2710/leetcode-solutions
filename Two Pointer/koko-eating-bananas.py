@@ -1,8 +1,9 @@
-# Problem: Koko Eating Bananas
-# Link: https://leetcode.com/problems/koko-eating-bananas/
-# Pattern: Binary Search (binary search on the answer)
-# Time Complexity: O(n log m), m = max(piles)
-# Space Complexity: O(1)
+# Problem: Kids With the Greatest Number of Candies
+# Link: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+# Pattern: Array Traversal
+# Concepts: Lists, max(), for loop, if-else, Boolean values
+# Time Complexity: O(n)
+# Space Complexity: O(n), including the output list
 class Solution:
     def minEatingSpeed(self, piles: list[int], h: int) -> int:
         n=len(piles)
