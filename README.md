@@ -2,7 +2,7 @@
 
 # 🧠 DSA Pattern Practice
 
-### 100 Days · Pattern by Pattern · Python
+### 100 Days · Pattern by Pattern
 
 ![Challenge](https://img.shields.io/badge/Challenge-100%20Days-2A6F77?style=for-the-badge)
 ![Day](https://img.shields.io/badge/Day-5%20%2F%20100-F2A900?style=for-the-badge)
