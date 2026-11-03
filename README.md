@@ -182,9 +182,29 @@ leetcode-solutions/
 
 ---
 
+<<<<<<< HEAD
 ## 🎯 Up Next
 - [ ] Day 6 (revision): redo 3Sum, Search in Rotated Sorted Array, and Koko Eating Bananas without hints
 - [ ] Day 6: rewrite Two Pointers and Binary Search notes from memory
 - [ ] Attempt Median of Two Sorted Arrays (merge version first, then partition)
 - [ ] Day 7: timed practice, 2 new problems in 45 minutes
 - [ ] Week 2: Sliding Window + Fast & Slow Pointers
+=======
+## 🎯 What's Next?
+
+- [ ] Revise 3Sum, Search in Rotated Sorted Array, and Koko Eating Bananas without hints.
+- [ ] Rewrite Two Pointers and Binary Search notes from memory.
+- [ ] Attempt Median of Two Sorted Arrays: merge-based approach first, then partition.
+- [ ] Complete a timed practice session: 2 problems in 45 minutes.
+- [ ] Start Sliding Window and Fast & Slow Pointers in Week 2.
+
+---
+
+<div align="center">
+
+**Consistency over shortcuts. Understanding over memorization.**
+
+*One problem at a time. One pattern at a time.*
+
+</div>
+>>>>>>> 0d79c6acae433320b86b12904b5cb8c01dbd94a9
