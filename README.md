@@ -9,7 +9,7 @@
 ![Solved](https://img.shields.io/badge/Solved-10-3C6E47?style=for-the-badge)
 ![Language](https://img.shields.io/badge/Python-3-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
-`█░░░░░░░░░░░░░░░░░░░` **5%**
+`█░░░░░░░░░░░░░░░░░░░` **10%**
 
 </div>
 
