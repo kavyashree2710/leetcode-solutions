@@ -3,7 +3,6 @@
 # Pattern: Two Pointers
 # Time Complexity: O(n)
 # Space Complexity: O(1)
-
 class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
         left, right = 0, len(nums)-1
